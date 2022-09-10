@@ -1,0 +1,108 @@
+.mobile-bar {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: var(--background-body);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  @media (max-width: 1220px) {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.mobile-bar__layout {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 52px;
+  width: 100%;
+}
+
+.mobile-bar__layout {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.mobile-bar__layout > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.mobile-bar--left a,
+.mobile-bar--right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 12px;
+  color: #b3b6bc;
+}
+
+.mobile-bar svg {
+  font-size: 24px;
+}
+
+.mobile-bar--left a svg,
+.mobile-bar--right a svg {
+  margin-right: 8px;
+}
+
+@media (max-width: 640px){
+.mobile-bar--left a span,
+.mobile-bar--right a span {
+  display: none;
+}
+}
+.mobile-bar__menu.menu_open {
+  color: var(--brand-color);
+}
+.mobile-bar--center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.mobile-bar--center a {
+  position: relative;
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 32px;
+  background: var(--background-body);
+}
+
+.mobile-bar--center svg {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--background-body);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  color: #b3b6bc;
+}

@@ -1,0 +1,12 @@
+.content{
+    padding: 2em;
+    margin: 2em;
+    margin-left: 5.5em;
+    color: var(--font-color-primary);
+    .main-new-img{
+        display: block;
+        img{
+            width: 100%;
+        }
+    }
+}

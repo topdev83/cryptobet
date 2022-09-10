@@ -1,0 +1,162 @@
+.page-user-form,
+.page-form,
+.page-form::before,
+.page-contacts {
+  @media (max-width: 1220px) {
+    background-image: none;
+  }
+}
+
+@media (max-width: 1220px){
+  .header, .main, .footer {
+    margin-left: 0;
+  }
+}
+.banner__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid var(--button-bg);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  border-radius: 16px;
+  padding: 32px 40px;
+  color: #eef0f6;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+.page-user-form {
+  background-image: url("images/bg_page-user-form.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-top: 32px;
+  background-size: 620px;
+  
+}
+.banner__wrapper--telegram {
+  background-image: url("./images/banner_telegram.svg"),linear-gradient(155.48deg,#a1ff8b -20.84%,#3f93ff 103.14%);
+}
+.banner__wrapper--sportbook {
+  background-image: url("./images/banner_sportbook.svg"),linear-gradient(274.94deg,#7a2c9e 1.73%,#d96331 62.38%,#e99018 100.57%);
+}
+.banner__wrapper--telegram,
+.banner__wrapper--sportbook,
+.banner__wrapper--faq {
+  height: 190px;
+  background-repeat: no-repeat;
+  background-position: bottom right 10%,center;
+  background-size: 25%,100%;
+}
+.banner__wrapper--telegram .banner, .banner__wrapper--sportbook .banner, .banner__wrapper--faq .banner {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.banner__wrapper{
+  color: #eef0f6;
+}
+.page-user-form .banner__wrapper {
+  margin-bottom: 24px;
+  height: auto;
+  min-height: 144px;
+}
+.page {
+  padding: 16px 0 80px;
+  min-height: calc(50vh - 72px);
+}
+.page-user-form .banner__description {
+  margin-bottom: 24px;
+}
+.banner h3 {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 4px;
+  text-align: start;
+}
+.banner p {
+  margin-bottom: 0;
+  color: #eef0f6 !important;
+}
+.banner__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+.page-user-form__wrapper {
+  width: 540px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: var(--background-body);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  border-radius: 40px;
+  padding: 40px 30px;
+  position: relative;
+  &:after{
+    content: '';
+    background: url("images/login-devil-body.svg") no-repeat;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 200px;
+    right: -387px;
+    z-index: -1;
+  }
+  &:before {
+    content: '';
+    background: url("images/login-devil.svg") no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -400px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 980px){
+  .page-user-form__wrapper::before, .page-contacts .page-form__wrapper::before, .page-user-form__wrapper::after, .page-contacts .page-form__wrapper::after {
+    content: none;
+  }
+  .page-user-form__wrapper, .page-contacts .page-form__wrapper {
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}

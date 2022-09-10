@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+    border-spacing: 0;
+    border: none;
+    color: #fff;
+    tr {
+        :last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+    }
+    th,td {
+        margin: 0;
+        padding: 0.5rem;
+        border: none;
+        :last-child {
+        border-right: 0;
+        }
+    }
+    th{
+        font-weight: lighter;
+        opacity: .5;
+    }
+    td{
+        text-align: center;
+    }
+}
+.table-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+    .table-icon{
+        width: 1em;
+        display: block;
+        margin: 0 .5em;
+        img{
+            width: 100%;
+        }
+    }
+}

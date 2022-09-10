@@ -1,0 +1,197 @@
+.crash-minigame{
+    padding: 2em;
+    margin: 2em;
+    margin-left: 5.5em;
+    display: flex;
+    justify-content: center;
+    .minigame-crash{
+        width: 70%;
+        box-sizing: border-box;
+        flex-direction: column;
+        display: flex;
+        .minigame-crash-header{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .battle-info{
+                display: flex;
+                align-items: center;
+                .question-mark{
+                    background-color: #525558;
+                    padding: .25em;
+                    width: 1.5em;
+                    height: 1.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-right: .5em;
+                    flex: 0 0 auto;
+                }
+            }
+            .help-section{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: var(--font-color-primary);
+                .help-icon{
+                    background-color: #13232c;
+                    padding: .25em;
+                    width: 1.5em;
+                    height: 1.5em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-right: .5em;
+                    flex: 0 0 auto;
+                    cursor: pointer;
+                }
+            }
+        }
+        .minigame-crash-container{
+            width: 100%;
+            min-height: 70vh;
+            border-radius: .5em;
+            margin:1em 0;
+            border: 2px solid var(--font-color-primary);
+        }
+        .minigame-crash-footer{
+            display: flex;
+            justify-content: space-around;
+            color: var(--font-color-primary);
+            .bet-info{
+                border-radius: 10em;
+                border: 1px solid rgba( 255, 255, 255, .25);
+                display: flex;
+                padding: .5em 2em;
+                align-items: center;
+                .range{
+                    margin: 0 1em;
+                    text-align: center;
+                    font-size: .75em;
+                    .separator{
+                        margin-bottom: .5em;
+                        margin-top: .5em;
+                    }
+                }
+                .values{
+                    text-align: center;
+                    .main-value{
+                        font-weight: bold;
+                        font-size: 1.25em;
+                        display: flex;
+                        .diamond-value-icon{
+                            display: flex;
+                            width: 1.5em;
+                            margin-right: .5em;
+                            box-sizing: border-box;
+                            padding: .25em;
+                            height: 1.5em;
+                            border-radius: 50%;
+                            background-color: red;
+                            border: 2px solid #fff;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .secondary-value{
+                        opacity: .5;
+                    }
+                }
+            }
+            .multiplier-info{
+                display: flex;
+                flex-direction: column;
+                margin: 0 1em;
+                .counter{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    div{
+                        width: 50%;
+                    }
+                    .values{
+                        font-size: 1.5em;
+                        font-weight: bold;
+                    }
+                }
+                .range{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .game-info{
+        width: 30%;
+        box-sizing: border-box;
+        padding: 1em;
+        .user-list{
+            ul{
+                .user-item{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: .25em .5em;
+                    margin-bottom: .5em;
+                    .user{
+                        display: flex;
+                        align-items: center;
+                        .avatar-container{
+                            width: 2.5em;
+                            height: 2.5em;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            background-color: var(--font-color-primary);
+                            margin-right: .5em;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .user-data{
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                    .value{
+
+                    }
+                }
+            }
+        }
+    }
+    .rounded-container{
+        border-radius: 10em;
+        border: 1px solid rgba( 255, 255, 255, .25);
+        color: var(--font-color-primary);
+        padding: .25em .25em;
+    }
+    .separator{
+        background: rgb(255,255,255);
+        background: linear-gradient(273deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+        width: 100%;
+        height: 2px;
+        margin-bottom: 1em;
+    }
+    
+    .bet-button{
+        background: rgb(70,178,152);
+        background: linear-gradient(180deg, rgba(70,178,152,1) 0%, rgba(147,205,190,1) 100%);
+        border-radius: 10em;
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #fff;
+        transition: all .25s;
+        box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.0);
+        &:hover{
+            box-shadow: 0px 0px 10px 0px rgba(255,255,255,0.75);
+        }
+    }
+}

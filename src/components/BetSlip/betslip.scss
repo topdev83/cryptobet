@@ -1,0 +1,172 @@
+.spt-bet-slip {
+  inset-inline: 0;
+  bottom: 0;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  @media (max-width: 1216px){
+    bottom: 50px
+  }
+  z-index: 999;
+  --swiper-theme-color: 0;
+  --swiper-navigation-size: 0;
+  > div {
+    inset: 0;
+    overflow: hidden;
+    position: absolute;
+    
+    >div {
+      width: 320px;
+      bottom: -120px;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      @media (max-width: 598px) {
+        width: 100%;
+      }
+      >div {
+        left: 0;
+        right: 0;
+        bottom: 120px;
+        position: absolute;
+        //box-shadow: 0 0 100px rgba(0,0,0,0.65);
+        text-shadow: none;
+        border-radius: 6px 6px 0 0;
+        pointer-events: auto;
+        color: white;
+        
+      }
+    }
+  }
+}
+.bet-slip-box {
+  color: #ffffff;
+  cursor: pointer;
+  height: 56px; //320px cuando activo
+  display: flex;
+  //padding: 0 16px;
+  z-index: 1;
+  position: relative;
+  background: #b83222;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 6px 6px 0 0;
+  justify-content: flex-start;
+  flex-direction: column;
+  
+  &:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    background: linear-gradient(270deg, #FFB800 0%, #b83222 100%);
+    transition: opacity 300ms ease-in-out;
+    border-radius: inherit;
+  }
+}
+.bet-slip-title {
+  display: flex;
+  background: #b83222;
+  width: 100%;
+  justify-content: space-around;
+  padding: 15px 0;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+.bet-slip-box.active {height: 544px}
+.bet-slip-body{
+  background: #242424;
+  inset: 0;
+  position: absolute;
+  padding: 54px 0 0 0;
+  box-shadow: 0 0 100px rgba(0,0,0,0.65);
+  text-shadow: none;
+  border-radius: 6px 6px 0 0;
+  pointer-events: auto;
+  
+}
+.bet-slip-body__nav {
+  border-radius: 0;
+  display: flex;
+  width: 100%;
+  >div {
+    padding: 10px 0 ;
+    border-radius: 0;
+    min-width: 33.333%;
+    text-align: center;
+    background: #383838;
+    font-size: 10px;
+    color: #5b5b5b;
+    
+    &.active {
+      color: white;
+      border-bottom: 2px solid red;
+    }
+  }
+}
+.bet-slip-body__bet {
+  display: flex;
+  width: 100%;
+  padding: 7px;
+  max-width: 100%;
+  overflow: hidden;
+  >div:nth-child(1){
+    border-radius: 10px 0 0 10px;
+    background: #4c4c4c;
+    cursor:pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  >div:nth-child(2){
+    position: relative;
+    background: #383838;
+    display: flex;
+    padding: 8px 16px 8px 8px;
+    border-radius: 0 10px 10px 0;
+    justify-content: space-between;
+    flex: 1;
+    &.inactive{
+    filter: blur(1px);
+    }
+    >div:nth-child(2) {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    >div>div:first-child{
+      display: flex;
+      padding: 5px 0;
+      font-weight: 600;
+      font-size: 14px;
+      color: white;
+      > i {
+        padding: 0 10px;
+      }
+    }
+    >div>div:nth-child(n+2) {
+      color: #989797;
+      font-size: 10px;
+    }
+    >div>div:nth-child(4) {
+      color: white;
+      padding-bottom: 5px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+.bet-slip-body_wrapper {
+  height: 100%;
+  width: 100%;
+  cursor: initial;
+}

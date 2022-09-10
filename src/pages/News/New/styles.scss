@@ -1,0 +1,22 @@
+.new-container{
+    background: rgb(25,30,33);
+    background: linear-gradient(180deg, rgba(25,30,33,1) 81%, rgba(219,105,187,1) 100%);
+    border-radius: .5em;
+    overflow: hidden;
+    .new-action{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+    .new-content{
+        padding: 1em;
+    }
+    .new-img{
+        width: 100%;
+        margin-bottom: 1em;
+        img{
+            width: 100%;
+        }
+    }
+}

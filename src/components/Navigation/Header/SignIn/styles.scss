@@ -1,0 +1,55 @@
+.modal-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    //width: 50%;
+    background-color: var(--background-body);
+    border-radius: 1em;
+    color: var(--font-color-primary);
+    display: flex;
+    overflow: hidden;
+    min-width: 50%;
+    .img-container{
+        width: 40%;
+        background-color: var(--button-bg);
+        padding: 5em 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .content{
+        width: 60%;
+        padding: 2em;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+}
+.MuiModal-root .MuiBackdrop-root{
+    //background-color: rgba(255,255,255,.5);
+}
+.MuiCheckbox-root{
+    .MuiTypography-root{
+        font-size: .75em;
+    }
+    color: var(--button-bg) !important;
+    &.Mui-checked{
+        color: var(--button-bg) !important;
+    }
+}
+.link{
+    color: var(--link-color);
+    text-decoration: underline var(--link-color);
+    cursor: pointer;
+}
+.form-control-label{
+    font-size: .75em;
+    font-weight: bold;
+}

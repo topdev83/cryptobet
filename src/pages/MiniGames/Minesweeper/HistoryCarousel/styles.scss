@@ -1,0 +1,33 @@
+.react-multiple-carousel__arrow{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    &:hover{
+        background-color: transparent;
+    }
+}
+.react-multi-carousel-list{
+    //overflow: visible;
+}
+.react-multiple-carousel__arrow--left {
+    left: calc(-.75em)
+}
+.react-multiple-carousel__arrow--right {
+    right: calc(-.75em)
+}
+.carousel-item{
+    padding: .25em 1em;
+    background-color: #2f2f39;
+    margin: 1em;
+    border: 1px solid #fff;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div:first-child{
+        font-weight: bold;
+    }
+    div:last-child{
+        font-size: .75em;
+    }
+}

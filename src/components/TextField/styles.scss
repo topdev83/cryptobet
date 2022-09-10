@@ -1,0 +1,41 @@
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], textarea{
+    box-shadow: none;
+    box-sizing: unset;
+}
+input:focus{
+    box-shadow: none !important;
+}
+.MuiTextField-root{
+    & .MuiInputAdornment-root{
+        color: red;
+    }
+    & label.Mui-focused{
+        color: var(--button-bg);
+    }
+    & label{
+        color: var(--border-color);
+    }
+    & .MuiInputAdornment-root{
+        color: var(--button-bg);
+    }
+    &:hover label, &:hover .MuiInputAdornment-root {
+        color:  var(--font-color-primary);
+    }
+    & .MuiInput-underline:after {
+        border-color: var(--button-bg);
+    }
+    & .MuiOutlinedInput-root {
+        & fieldset {
+          border-color: var(--border-color);
+          border-width:'5px';
+          border-radius:'2em';
+        }
+        &:hover fieldset {
+            border-color: var(--button-bg);
+        }
+        &.Mui-focused fieldset{
+            color: orange;
+            border-color: var(--border-color);
+        }
+    }
+}

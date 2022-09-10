@@ -1,0 +1,177 @@
+/* General */
+
+.mfp-ready {
+  transform: translate(100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mfp-ready.show {
+  transform: translate(0%);
+  background: #2f384e;
+  opacity: 0.68;
+  transition: opacity 0.4s ease;
+}
+
+.mfp-ready.mfp-wrap {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.mfp-ready.mfp-wrap.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.mfp-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1042;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: #0b0b0b;
+  opacity: 0.8;
+}
+
+.user-navigation.mfp-bg,
+.lang-menu.mfp-bg,
+.transaction-filters.mfp-bg {
+  background: #2f384e;
+  opacity: 0.68;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.mfp-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1043;
+  width: 100%;
+  height: 100%;
+  outline: none !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.user-navigation.mfp-wrap,
+.sidebar-providers.mfp-wrap,
+.lang-menu.mfp-wrap,
+.transaction-filters.mfp-wrap {
+  left: auto;
+  right: 0;
+  width: 100%;
+  max-width: 540px;
+  background: var(--background-body);
+}
+
+.user-navigation.mfp-wrap,
+.sidebar-providers.mfp-wrap,
+.lang-menu.mfp-wrap,
+.transaction-filters.mfp-wrap {
+  opacity: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.sidebar-providers.mfp-wrap {
+  max-width: 55%;
+}
+
+.user-navigation.mfp-ready.mfp-wrap,
+.sidebar-providers.mfp-ready.mfp-wrap,
+.lang-menu.mfp-ready.mfp-wrap,
+.transaction-filters.mfp-ready.mfp-wrap {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -ms-overflow-style: none;
+  scrollbar-width: thin;
+  scrollbar-color: #979eb7 #eef0f6;
+  z-index: 99999;
+}
+
+.mfp-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 8px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.mfp-container:before {
+  display: inline-block;
+  height: 100%;
+  content: "";
+  vertical-align: middle;
+}
+
+.mfp-content {
+  position: relative;
+  z-index: 1045;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+  width: auto;
+  max-width: 100%;
+  cursor: auto;
+}
+
+.mfp-auto-cursor .mfp-content {
+  cursor: auto;
+}
+
+.user-navigation .mfp-content,
+.sidebar-providers .mfp-content,
+.lang-menu .mfp-content,
+.transaction-filters .mfp-content {
+  width: 100%;
+  height: 100%;
+}
+
+/* preloader */
+
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mfp-preloader {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  left: 8px;
+  z-index: 1044;
+  margin-top: -0.8em;
+  width: auto;
+  color: #ccc;
+  text-align: center;
+}
+
+.mfp-s-ready .mfp-preloader {
+  display: none;
+}

@@ -1,0 +1,15 @@
+.react-multiple-carousel__arrow{
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.main-carousel-item{
+    background: #fff;  
+    min-height: 5em;
+    margin: 0 1em;
+    border-radius: 1em;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
